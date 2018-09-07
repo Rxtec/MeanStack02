@@ -1,0 +1,31 @@
+{
+  "name": "angularcore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rxtec/MeanStack02.git"
+  },
+  "author": "Jose R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rxtec/MeanStack02/issues"
+  },
+  "homepage": "https://github.com/Rxtec/MeanStack02#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "js": "^0.1.0",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.2.13",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

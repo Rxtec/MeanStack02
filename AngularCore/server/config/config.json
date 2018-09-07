@@ -1,0 +1,17 @@
+{
+    "development":{
+       "PORT":3000,
+        "MONGODB_URI": "mongodb://localhost:27017/UserStackDB",
+        "JWT_SECRET":"HIDDEN#787",
+        "JWT_EXP": "1m"
+    },
+
+    "production":{
+        "PORT": 80,
+        "MONGODB_URI":"mongodb://xxxxx/DB_Name",
+        "JWT_SECRET":"HIDDEN#787",
+        "JWT_EXP": "1m"
+    }
+
+
+}

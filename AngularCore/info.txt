@@ -1,0 +1,59 @@
+// los archivos tiene mas detalles sobre  pasos  // esta parte es de back end del programa 
+
+Paso 1: el jason file se inicion con el comando "npm install"
+
+Paso 2: el node modules , packake lock.json y package.json se creo con el siguente comando
+        npm i --save express mongoose body-parser bcrypt js cors
+
+Paso 3 :crear la carpeta de config/ crear el archivo de config.jason
+        configurar el JSON file para que contenga la informacion del servidor // config.JSON
+Paso 4 :crear y configurar el config.js dentro de la misma carpeta de config
+
+Paso 5 : Crear el archivo de App.js en el root de la aplicacion y configurarla 
+
+
+Paso6 : en esta etapa puede provar si el sistema se conecta con la base de dato utilizando el 
+        comando de : node app.js
+Paso: opcional // para que no tengas que correr el codigo node app.js cada rato para ver si la connection esta realizada
+        puedes instalar el makage de nodemon para que aga "refesh " cada tiempo que le das save a el codigo
+        ejemplo : npm  - i nodemon -> press enter...... y para ejecutar el godigo utilisar en el comand promt 
+        el comando : nodemon (y el nombre de el archivo) // ejemplo , nodemon app.js-> press ennter
+Paso 7: Como estamos trabajando con Usuarios debemos hacerle ahora un link  a la base de datos
+        hara defenir un mongoose model/ Utilizare el nombre de Users en el archivo de models
+
+paso 8: crear un controller for the user Registration  // utilizare el nobre de controller
+paso 9: crear un directorio para estableser la ruta // nuevo directorio y un archivo de index.rauter.js
+
+paso 10: ahora mismo puede enviar un post utilizando el postman para poder provar que estan recibiendo informacion
+
+
+
+
+Paso 15: Crear un nuevo directorio para el Angular Front end 
+
+Paso:16: comand ng new "nombre del directorio" este caso es core   np new core    
+Paso 17: ejecutar el comando ng g c "nombre del directorio" para otro directorio de Usuarios 
+        ejemplo : ng g c user // este  es como el directorio padre
+Paso 18: para el directorio hijo  entrar al directorio de User y correr el siguiente comando ng g c "nombre del directorio"
+                ejemplo: ng g c sign-up 
+
+
+
+
+
+Paso 30:installar el JsonWeb Token ,passport y lodash//en el directorio de server ejecutar el siguente comando         
+        npm install --save jsonwebtoken passport passport-local lodash
+Paso 31 : Configurar el passport utilizando local strategy
+        a) crea un archivo dentro del servidor llamado passportConfig.js
+
+//recursos 
+https://www.npmjs.com/package/bcrypt
+https://angular.io/guide/quickstart
+https://jwt.io/
+
+
+
+
+data base set Up config
+        esta como default,              
+        para debe crear una base de Dato con el nombre de UsersStackDB y como arguemento: users
