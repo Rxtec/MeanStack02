@@ -16,7 +16,7 @@ if ('authorization' in req,headers){
                 }
                 else{
 
-                    req._id - decoded._id;
+                    req._id = decoded._id;
                     next();
                 }
 

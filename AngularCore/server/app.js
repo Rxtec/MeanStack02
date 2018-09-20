@@ -25,16 +25,17 @@ app.use ('/api',rtstIndex);
 
 app.use((err,req,res, next)=>{
 
-if (err.name==='ValidationError'){
+if (err.name === 'ValidationError'){
 var valError =[];//variable para guardar los errorres
 Object.keys(err.errors).forEach(key =>valError.push(err.errors[key].message));
-res.status(422).send(valError);
+res.status(422).send(valError)
 
 }
+else{console.log(err);}
 
 });// para manejar validaciones globalmente
 
-'/api/register' // cuando el usuario se registra utilisara el interface para anadir
+//'/api/register' // cuando el usuario se registra utilisara el interface para anadir
 
 app.listen(process.env.PORT, () => console.log(`Server connected at  port :${process.env.PORT}`)); // inicio del servidor 
 

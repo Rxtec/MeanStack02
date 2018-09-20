@@ -41,15 +41,55 @@ Paso 18: para el directorio hijo  entrar al directorio de User y correr el sigui
 
 
 
-Paso 30:installar el JsonWeb Token ,passport y lodash//en el directorio de server ejecutar el siguente comando         
+Paso:30:Instalar el Angular 6, ng  new core// core es el nombre del directorio
+
+Paso 31:installar el JsonWeb Token ,passport y lodash//en el directorio de server ejecutar el siguente comando         
         npm install --save jsonwebtoken passport passport-local lodash
-Paso 31 : Configurar el passport utilizando local strategy
+Paso 32 : Configurar el passport utilizando local strategy
         a) crea un archivo dentro del servidor llamado passportConfig.js
 
+Paso 33: crear un directorio y crear sus atributos // model class
+        comando: ng g class -- type=model
+                        genera la clase y la brinda la extencion tipo model
+        dentro de esta clase , se establese cuales seran los atributos de la clase: este caso, password,email y user name 
+ 
+paso 35: estableser los atributos en el CSS de como se vera la forma // este  esta en el archivo de src//styles.css
+
+paso 36: declarar en el user.service.ts  el Usuario  , importando del archivo de user.model.ts  
+
+        ejemplo: import {User} from "..User/model";// no se tiene que poner la extencion del mismo
+
+paso 37: Crear la forma de Sign up ,este esta en la modificacion del archivo de sign-up.component.html  
+        acordar que se tiene que utilisazar las propiedades ya establesidas, como la del fullName, email y password
+
+Paso 38:dentro del directorio de src buscar el archivo de app.component.html y poner el siguiente cogido
+        <router-outlet></router-outlet>// esto es para que saque la informacion del user.component.html
+        
+
+paso 39: creal el archivo de  routes.ts dentro del directorio de src // dentro del archivo continua los pasos
+        pasar crea la rutas             
+Paso 40: despues de crear la forma , tambien tendra que realizar la validaciones en la parte del cliente 
+        ejemplo: <input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.fullName" 
+        name="fullName" placeholder="Enter your Name"
+        required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }">
+
+paso 41: en el directorio enviroments , en el archivo de enviroments.ts  dentro de la funcion inclu
+        ir la dirrecion de la base de dato , para  cuando llames el API se pueda conectar       
+        ejemplo:
+                 apiBaseUrl:'http://localHost:3000/api'
+                                // la direcion basica donde esta la base de datos para conectarse
+
+
 //recursos 
+
+
+
 https://www.npmjs.com/package/bcrypt
 https://angular.io/guide/quickstart
 https://jwt.io/
+https://mean.io
+https://www.npmjs.com/package/express.io
+https://nodejs.org/en/
 
 
 

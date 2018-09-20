@@ -19,7 +19,7 @@ const jwt = require('jsonwebtoken');
     password: {
         type:String,
         require:'Password cant be Empty.',
-        minlength: [4,'Minimun characters for the password is 4, please change or add charaters your password']
+        minlength: [8,'Minimun characters for the password is 8, please change or add charaters your password']
 
 
     },
@@ -33,6 +33,7 @@ userSchema.path('email').validate((val)=>{
 },'Invalid email');
 
  userSchema.pre('save', function (next){
+
 
     bcrypt.genSalt(10,(err,salt)=>{ // codido aleatorio encriptado
         bcrypt.hash(this.password,salt,(err, hash) => {
@@ -57,7 +58,10 @@ userSchema.methods.verifyPassword = function(password){
 userSchema.methods.generateJwt = function(){
 
     return jwt.sign({_id:this._id,exp},
-    process.env.JWT_SECRET);
+    process.env.JWT_SECRET,{
+
+        expiresIn: process.env,JWT_EXP
+    });
      
 }
  //este es utilizando dos parametos en la funcion , pero si tienes uno modificado puedes ponerlo un tercer paramertro

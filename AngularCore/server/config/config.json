@@ -3,7 +3,7 @@
        "PORT":3000,
         "MONGODB_URI": "mongodb://localhost:27017/UserStackDB",
         "JWT_SECRET":"HIDDEN#787",
-        "JWT_EXP": "1m"
+        "JWT_EXP": "2m"
     },
 
     "production":{
@@ -13,5 +13,5 @@
         "JWT_EXP": "1m"
     }
 
-
+    
 }
